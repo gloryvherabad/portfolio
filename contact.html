@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Glory Vherabad</title>
+<meta name="description" content="Send a message about a new product or an existing one you want to improve.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter" aria-hidden="true">000%</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">glory<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">work</a>
+      <a href="about.html">about</a>
+      <a href="contact.html" aria-current="page">contact</a>
+      <a class="nav-cta" href="contact.html">get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:56px">
+    <div class="wrap">
+      <span class="mark">contact</span>
+      <h1 style="margin-top:18px">Let’s make <span class="serif">something better.</span></h1>
+      <p class="lead" style="margin-top:24px">Working on a new product or improving an existing one? Tell me what you’re building and I’ll get back to you.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;border-top:0">
+    <div class="wrap contact-split">
+      <!-- FORM -->
+      <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required placeholder="Jane Dela Cruz">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="jane@company.com">
+        </div>
+        <div>
+          <label for="subject">What is this about?</label>
+          <input id="subject" name="subject" type="text" placeholder="New mobile app, website redesign, etc.">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="A few lines about the product, the problem, and your timeline."></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="btn" type="submit" id="submitBtn">Send message</button>
+        <p class="status" id="status" role="status"></p>
+        <p class="note">Your message goes straight to my inbox. I usually reply within two business days.</p>
+      </form>
+
+      <!-- SIDE -->
+      <div>
+        <h3>Other ways to reach me</h3>
+        <div class="links">
+          <a href="mailto:hello@yourdomain.com">Email · hello@yourdomain.com</a>
+          <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
+        </div>
+        <p class="note" style="margin-top:28px">Based in the Philippines, working with teams across time zones.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom" style="margin-top:0">
+      <span>© <span id="yr"></span> Glory Vherabad</span>
+      <span>Product UI/UX Designer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
