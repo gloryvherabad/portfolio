@@ -1,96 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Glory Vherabad</title>
-<meta name="description" content="A matcha and coffee-fueled product designer. How I got into UI/UX and how I work.">
+<title>About · Glory, Product Designer</title>
+<meta name="description" content="From front-end internship to UI/UX product design, and back to code through AI. A matcha and coffee fueled designer.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="About · Glory, Product Designer">
+<meta property="og:description" content="From front-end internship to UI/UX product design, and back to code through AI. A matcha and coffee fueled designer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desisgnportfolio.vercel.app/about.html">
+<meta property="og:image" content="https://desisgnportfolio.vercel.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=DM+Mono:wght@400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){var d=document.documentElement,s=null;try{s=localStorage.getItem('motion')}catch(e){}var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s==='off'||(s===null&&r))d.classList.add('no-motion');else d.classList.add('js-motion')})()</script>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<div class="counter" id="counter" aria-hidden="true">000%</div>
-
-<header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap nav">
-    <a class="logo" href="index.html">glory<span>.</span></a>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
-    <nav class="nav-links" id="menu">
-      <a href="index.html">work</a>
-      <a href="about.html" aria-current="page">about</a>
-      <a href="contact.html">contact</a>
-      <a class="nav-cta" href="contact.html">get in touch</a>
+    <a class="brand" href="index.html" aria-label="Glory, product designer. Home"><b>Glory</b><span>Product Designer</span></a>
+    <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+    <nav aria-label="Main">
+      <ul class="nav-list" id="site-menu">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <button class="icon-btn motion-btn" type="button" data-motion-toggle aria-pressed="false" aria-label="Pause animations" title="Pause animations">
+      <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+    </button>
   </div>
 </header>
 
-<main>
-  <section class="hero">
+<main id="main">
+  <section class="page-head dark">
     <div class="wrap">
-      <span class="mark">about</span>
-      <h1 style="margin-top:18px">A matcha &amp; coffee-fueled <span class="serif">product designer.</span></h1>
+      <p class="eyebrow reveal">About</p>
+      <h1 class="reveal" style="--d:80ms">A matcha &amp; coffee fueled <em>product designer.</em></h1>
+      <p class="lead reveal" style="--d:160ms">I design websites, mobile apps and web products at Chayland Design. I like fast tools and slow decisions.</p>
     </div>
   </section>
 
-  <section>
-    <div class="wrap story">
-      <div>
-        <span class="mark">the short version</span>
-        <h2 style="margin-top:14px;font-size:clamp(1.5rem,3vw,2.1rem)">From front-end code to product design, and back again.</h2>
+  <section class="section paper" aria-labelledby="story-title">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="num">01</span> The short version</p>
+        <h2 id="story-title" style="margin-top:1.5rem;font-size:clamp(2rem,4vw,3.2rem)">From front-end code to design, <em>and back again.</em></h2>
+        <ul class="facts" style="margin-top:3rem">
+          <li><span>Role</span><span>UI/UX Product Designer</span></li>
+          <li><span>Studio</span><span><a class="link" href="https://chayland.com/">Chayland Design</a></span></li>
+          <li><span>Designs</span><span>Websites, apps, web apps</span></li>
+          <li><span>Builds with</span><span>Figma, AI, a lot of tea</span></li>
+          <li><span>Based in</span><span>The Philippines, remote</span></li>
+        </ul>
       </div>
-      <div>
-        <p>My journey into product design started during an internship as a front-end web developer. I went in thinking I might become the “cool programmer” I always imagined myself being, but along the way, I discovered that I was more interested in designing the experience than writing the code.</p>
-        <p>That curiosity led me to UI/UX, and I’ve been designing digital products ever since.</p>
-        <p>Today, I design websites, mobile apps, and digital products. And somehow, the dream of coding came back around. I’m now vibe coding and actually enjoying it, proving that maybe I just needed to find my own way of doing it.</p>
-        <p>These days, you’ll probably find me designing with a cup of coffee or matcha nearby.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="mark">how I design</span>
-        <h2>I start with the problem, <span class="serif">not just the screen.</span></h2>
-      </div>
-      <div class="steps">
-        <div class="step"><div class="n">01</div><div><h3>Understand</h3><p>What are we trying to solve? Who are we solving it for?</p></div></div>
-        <div class="step"><div class="n">02</div><div><h3>Simplify</h3><p>I organize information and remove unnecessary complexity.</p></div></div>
-        <div class="step"><div class="n">03</div><div><h3>Design</h3><p>I turn the solution into clear screens, interactions, and visual systems.</p></div></div>
-        <div class="step"><div class="n">04</div><div><h3>Refine</h3><p>I test ideas, look for problems, and improve the experience.</p></div></div>
-        <div class="step"><div class="n">05</div><div><h3>Build</h3><p>I work with developers and the wider team to bring the design into the real product.</p></div></div>
+      <div class="prose reveal" style="--d:120ms">
+        <p>My path into product design started with an internship as a front-end developer. I went in thinking I’d become the cool programmer I always pictured. Along the way I noticed I cared more about how the experience felt than about the code behind it.</p>
+        <p>That curiosity took me to UI/UX, and I’ve been designing digital products ever since.</p>
+        <p>Then the coding came back around. With AI I now vibe code a lot of what I design, from quick prototypes to real pages. It turns out I just needed my own way in.</p>
+        <p>What hasn’t changed is the part I love most: taking something fast and rough and making it clean, clear and intentional. AI is a great collaborator. It still needs someone with taste in the room.</p>
       </div>
     </div>
   </section>
 
-  <section class="statement">
+  <section class="section dark" aria-labelledby="desk-title">
     <div class="wrap">
-      <span class="mark">beyond the interface</span>
-      <p style="margin-top:24px">Good design isn’t only about how a screen looks.</p>
-      <p class="dim" style="font-size:1.05rem;line-height:1.6;letter-spacing:0">It’s about whether someone understands what to do, knows where to go next, and can accomplish what they came to do. That’s what I try to achieve with every product I work on.</p>
+      <div class="sec-head split reveal">
+        <div>
+          <p class="eyebrow"><span class="num">02</span> My desk, roughly</p>
+          <h2 id="desk-title" style="margin-top:1.5rem">Things you’ll find <em>nearby.</em></h2>
+        </div>
+        <div>
+          <p class="muted">Drag the stickers around. On a keyboard, tab to one and use the arrow keys.</p>
+          <button class="btn btn-ghost" type="button" data-desk-reset style="margin-top:1rem">Tidy up the desk</button>
+        </div>
+      </div>
+      <div class="desk reveal" role="group" aria-label="Sticker desk, decorative">
+        <button type="button" class="sticker round s-matcha" data-fx=".06" data-fy=".12" aria-label="Matcha sticker. Use arrow keys to move.">Matcha<br>first</button>
+        <button type="button" class="sticker round s-coffee" data-fx=".24" data-fy=".52" aria-label="Coffee sticker. Use arrow keys to move.">Coffee<br>second</button>
+        <button type="button" class="sticker s-figma" data-fx=".46" data-fy=".08" aria-label="Figma sticker. Use arrow keys to move.">Figma, always open</button>
+        <button type="button" class="sticker s-vibe" data-fx=".72" data-fy=".22" aria-label="Vibe coding sticker. Use arrow keys to move.">Vibe coding ✦</button>
+        <button type="button" class="sticker round s-pixel" data-fx=".55" data-fy=".62" aria-label="Pixel perfect-ish sticker. Use arrow keys to move.">Pixel<br>perfect-ish</button>
+        <button type="button" class="sticker s-ship" data-fx=".86" data-fy=".72" aria-label="Ship it sticker. Use arrow keys to move.">Ship it</button>
+        <button type="button" class="sticker s-human" data-fx=".1" data-fy=".86" aria-label="Human in the loop sticker. Use arrow keys to move.">Human in the loop</button>
+        <p class="desk-hint" aria-hidden="true">Drag me around</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper" aria-labelledby="believe-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="num">03</span> What I believe</p>
+        <h2 id="believe-title" style="margin-top:1.5rem;max-width:16ch">Good design isn’t only <em>how it looks.</em></h2>
+      </div>
+      <ul class="cols-4">
+        <li class="reveal"><h3>Clarity first</h3><p>Can someone tell what this is, and what to do next, in five seconds?</p></li>
+        <li class="reveal" style="--d:80ms"><h3>Specific words</h3><p>Real prices, real names, real verbs. Vague copy is a design problem.</p></li>
+        <li class="reveal" style="--d:160ms"><h3>Fast, then careful</h3><p>AI for momentum. Human judgment for every detail that ships.</p></li>
+        <li class="reveal" style="--d:240ms"><h3>For everyone</h3><p>Readable contrast, keyboard paths and motion you can pause are part of the job.</p></li>
+      </ul>
     </div>
   </section>
 </main>
-
-<footer>
+<footer class="site-footer dark">
   <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <span class="mark">let’s make something better</span>
-        <h2 style="margin-top:16px">Working on a new product or improving an existing one?</h2>
+    <div class="footer-cta reveal">
+      <p class="eyebrow">Have a product in mind?</p>
+      <h2 style="margin-top:1.5rem">Let’s make it <em>intentional.</em></h2>
+      <div class="btn-row">
+        <a class="btn btn-light" href="contact.html">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
       </div>
-      <a class="btn" href="contact.html">Get in touch</a>
     </div>
-    <div class="foot-bottom">
-      <span>© <span id="yr"></span> Glory Vherabad</span>
-      <span>Product UI/UX Designer</span>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Glory. Product designer at <a class="link" href="https://chayland.com/">Chayland Design</a>.</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:hello@yourdomain.com">Email</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

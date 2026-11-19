@@ -1,91 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Glory Vherabad</title>
-<meta name="description" content="Send a message about a new product or an existing one you want to improve.">
+<title>Contact · Glory, Product Designer</title>
+<meta name="description" content="Working on a new product or improving an existing one? Tell Glory what you’re building.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Contact · Glory, Product Designer">
+<meta property="og:description" content="Working on a new product or improving an existing one? Tell Glory what you’re building.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desisgnportfolio.vercel.app/contact.html">
+<meta property="og:image" content="https://desisgnportfolio.vercel.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=DM+Mono:wght@400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){var d=document.documentElement,s=null;try{s=localStorage.getItem('motion')}catch(e){}var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s==='off'||(s===null&&r))d.classList.add('no-motion');else d.classList.add('js-motion')})()</script>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<div class="counter" id="counter" aria-hidden="true">000%</div>
-
-<header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap nav">
-    <a class="logo" href="index.html">glory<span>.</span></a>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
-    <nav class="nav-links" id="menu">
-      <a href="index.html">work</a>
-      <a href="about.html">about</a>
-      <a href="contact.html" aria-current="page">contact</a>
-      <a class="nav-cta" href="contact.html">get in touch</a>
+    <a class="brand" href="index.html" aria-label="Glory, product designer. Home"><b>Glory</b><span>Product Designer</span></a>
+    <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+    <nav aria-label="Main">
+      <ul class="nav-list" id="site-menu">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
     </nav>
+    <button class="icon-btn motion-btn" type="button" data-motion-toggle aria-pressed="false" aria-label="Pause animations" title="Pause animations">
+      <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+    </button>
   </div>
 </header>
 
-<main>
-  <section class="hero" style="padding-bottom:56px">
+<main id="main">
+  <section class="page-head dark">
     <div class="wrap">
-      <span class="mark">contact</span>
-      <h1 style="margin-top:18px">Let’s make <span class="serif">something better.</span></h1>
-      <p class="lead" style="margin-top:24px">Working on a new product or improving an existing one? Tell me what you’re building and I’ll get back to you.</p>
+      <p class="eyebrow reveal">Contact</p>
+      <h1 class="reveal" style="--d:80ms">Let’s make something <em>better.</em></h1>
+      <p class="lead reveal" style="--d:160ms">Working on a new product or improving one that already exists? Tell me what you’re building. I reply within two business days.</p>
     </div>
   </section>
 
-  <section style="padding-top:0;border-top:0">
-    <div class="wrap contact-split">
-      <!-- FORM -->
-      <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div>
+  <section class="section paper" aria-labelledby="form-title">
+    <div class="wrap contact-grid">
+      <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-email="hello@yourdomain.com" novalidate>
+        <h2 id="form-title" class="sr-only">Project inquiry form</h2>
+        <div class="field">
           <label for="name">Your name</label>
-          <input id="name" name="name" type="text" required placeholder="Jane Dela Cruz">
+          <input id="name" name="name" type="text" autocomplete="name" required data-name="name" aria-describedby="name-error">
+          <p class="error" id="name-error" aria-live="polite"></p>
         </div>
-        <div>
+        <div class="field">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="jane@company.com">
+          <input id="email" name="email" type="email" autocomplete="email" required data-name="email" aria-describedby="email-error">
+          <p class="error" id="email-error" aria-live="polite"></p>
         </div>
-        <div>
-          <label for="subject">What is this about?</label>
-          <input id="subject" name="subject" type="text" placeholder="New mobile app, website redesign, etc.">
+        <div class="field">
+          <label for="company">Company <span class="hint">(optional)</span></label>
+          <input id="company" name="company" type="text" autocomplete="organization">
         </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="A few lines about the product, the problem, and your timeline."></textarea>
+        <div class="field">
+          <label for="type">What do you need?</label>
+          <select id="type" name="type">
+            <option>A new website</option>
+            <option>A mobile app</option>
+            <option>A web app or portal</option>
+            <option>A redesign of something existing</option>
+            <option>Not sure yet</option>
+          </select>
         </div>
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-        <button class="btn" type="submit" id="submitBtn">Send message</button>
-        <p class="status" id="status" role="status"></p>
-        <p class="note">Your message goes straight to my inbox. I usually reply within two business days.</p>
+        <div class="field">
+          <label for="message">Tell me about the project</label>
+          <p class="hint" id="message-hint">What it is, who it’s for, and your rough timeline.</p>
+          <textarea id="message" name="message" required data-name="message" aria-describedby="message-hint message-error"></textarea>
+          <p class="error" id="message-error" aria-live="polite"></p>
+        </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div><button class="btn btn-dark" type="submit">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
 
-      <!-- SIDE -->
       <div>
-        <h3>Other ways to reach me</h3>
-        <div class="links">
-          <a href="mailto:hello@yourdomain.com">Email · hello@yourdomain.com</a>
-          <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
-          <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
-        </div>
-        <p class="note" style="margin-top:28px">Based in the Philippines, working with teams across time zones.</p>
+        <p class="eyebrow">Other ways to reach me</p>
+        <ul class="contact-links" style="margin-top:1.5rem">
+          <li><a href="mailto:hello@yourdomain.com">Email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="https://chayland.com/" rel="noopener">Chayland Design <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        </ul>
+        <p class="muted" style="margin-top:2rem">Based in the Philippines and working with teams across time zones.</p>
       </div>
     </div>
   </section>
 </main>
-
-<footer>
+<footer class="site-footer dark">
   <div class="wrap">
-    <div class="foot-bottom" style="margin-top:0">
-      <span>© <span id="yr"></span> Glory Vherabad</span>
-      <span>Product UI/UX Designer</span>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Glory. Product designer at <a class="link" href="https://chayland.com/">Chayland Design</a>.</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:hello@yourdomain.com">Email</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

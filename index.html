@@ -1,180 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Glory Vherabad — Product UI/UX Designer</title>
-<meta name="description" content="Product UI/UX Designer working across mobile apps, websites, and digital products.">
+<title>Glory · Product Designer for startups and SaaS</title>
+<meta name="description" content="Glory is a UI/UX product designer who designs websites, mobile apps and web products, builds fast with AI, and finishes every detail by hand.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Glory · Product Designer for startups and SaaS">
+<meta property="og:description" content="Glory is a UI/UX product designer who designs websites, mobile apps and web products, builds fast with AI, and finishes every detail by hand.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desisgnportfolio.vercel.app/">
+<meta property="og:image" content="https://desisgnportfolio.vercel.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=DM+Mono:wght@400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){var d=document.documentElement,s=null;try{s=localStorage.getItem('motion')}catch(e){}var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s==='off'||(s===null&&r))d.classList.add('no-motion');else d.classList.add('js-motion')})()</script>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<div class="counter" id="counter" aria-hidden="true">000%</div>
-
-<header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap nav">
-    <a class="logo" href="index.html">glory<span>.</span></a>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
-    <nav class="nav-links" id="menu">
-      <a href="index.html" aria-current="page">work</a>
-      <a href="about.html">about</a>
-      <a href="contact.html">contact</a>
-      <a class="nav-cta" href="contact.html">get in touch</a>
+    <a class="brand" href="index.html" aria-label="Glory, product designer. Home"><b>Glory</b><span>Product Designer</span></a>
+    <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+    <nav aria-label="Main">
+      <ul class="nav-list" id="site-menu">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <button class="icon-btn motion-btn" type="button" data-motion-toggle aria-pressed="false" aria-label="Pause animations" title="Pause animations">
+      <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+    </button>
   </div>
 </header>
 
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <h1>I design digital products <span class="serif">people enjoy using.</span></h1>
-      <p class="lead">I’m a Product UI/UX Designer working across mobile apps, websites, and digital products.</p>
-      <p class="lead">I turn ideas and complex problems into simple, clear experiences that make sense to the people using them.</p>
-      <div class="btns">
-        <a class="btn" href="#work">View my work</a>
-        <a class="btn ghost" href="about.html">About me</a>
+<main id="main">
+  <section class="hero dark" aria-labelledby="hero-title">
+    <div class="orb-wrap" aria-hidden="true"><div class="orb-glow"></div><canvas id="orb"></canvas></div>
+    <div>
+      <p class="hero-hello">Hello, my name is</p>
+      <h1 id="hero-title" class="hero-name" aria-label="Glory"><span style="--i:0">G</span><span style="--i:1">L</span><span style="--i:2">O</span><span style="--i:3">R</span><span style="--i:4">Y</span></h1>
+      <p class="hero-sub">I help startups and SaaS teams solve complex problems through thoughtful design.</p>
+    </div>
+    <div class="hero-meta">
+      <span class="hide-sm">Product designer · UI/UX</span>
+      <span><span class="status-dot" aria-hidden="true"></span>Designing at <a href="https://chayland.com/">Chayland</a></span>
+      <a class="hide-sm" href="#work">Selected work ↓</a>
+    </div>
+  </section>
+
+  <section class="section paper" aria-labelledby="intro-title">
+    <div class="wrap intro-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="num">01</span> How I work</p>
+        <h2 id="intro-title" class="statement" style="margin-top:1.5rem">AI gets a product to good. <em>Design</em> gets it to right.</h2>
+      </div>
+      <div class="prose reveal" style="--d:150ms">
+        <p>I design websites, mobile apps and web products, and I build a lot of them myself with AI. It lets me test real ideas in days instead of weeks.</p>
+        <p>The speed is the easy part. The work is deciding what to cut, what to say first, and how each screen should feel in someone’s hand. That part still needs a person who cares.</p>
       </div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section id="work">
+  <section id="work" class="section paper" style="padding-top:0" aria-labelledby="work-title">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="mark">selected work</span>
-        <h2>A collection of things I’ve designed</h2>
-        <p>Mobile apps, websites, and digital products, from first idea to shipped screens.</p>
+      <div class="sec-head split reveal">
+        <div>
+          <p class="eyebrow"><span class="num">02</span> Selected work</p>
+          <h2 id="work-title" style="margin-top:1.5rem">Products I’ve <em>shaped</em></h2>
+        </div>
+        <p class="muted">Four recent projects with the Chayland Design team, from a language app to a pool service with its own customer portal.</p>
       </div>
+      <ul class="work-grid">
+<li class="reveal" style="--d:0ms">
+  <a class="work-card" href="work/yaqalbi.html">
+    <div class="media"><img src="assets/img/work/yaqalbi-cover.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
+    <div class="info">
+      <span class="idx" aria-hidden="true">01</span>
+      <h3>Ya Qalbi <span class="arrow" aria-hidden="true">↗</span></h3>
+      <p>A language app that teaches Lebanese Arabic the way families actually speak it.</p>
+      <ul class="tags" aria-label="Scope"><li>Mobile app</li><li>Website</li><li>Brand system</li></ul>
+    </div>
+  </a>
+</li>
+<li class="reveal" style="--d:120ms">
+  <a class="work-card" href="work/chakra-lounge.html">
+    <div class="media"><img src="assets/img/work/chakra-cover.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
+    <div class="info">
+      <span class="idx" aria-hidden="true">02</span>
+      <h3>Chakra Lounge <span class="arrow" aria-hidden="true">↗</span></h3>
+      <p>A calmer, plain-language way into chakra-based self-care, built to grow into an app.</p>
+      <ul class="tags" aria-label="Scope"><li>Website redesign</li><li>Content structure</li></ul>
+    </div>
+  </a>
+</li>
+<li class="reveal" style="--d:0ms">
+  <a class="work-card" href="work/orlandos-oasis.html">
+    <div class="media"><img src="assets/img/work/oasis-cover.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
+    <div class="info">
+      <span class="idx" aria-hidden="true">03</span>
+      <h3>Orlando’s Oasis <span class="arrow" aria-hidden="true">↗</span></h3>
+      <p>Pool care that shows its price up front, plus a customer web app for every visit.</p>
+      <ul class="tags" aria-label="Scope"><li>Website</li><li>Web app</li><li>Service design</li></ul>
+    </div>
+  </a>
+</li>
+<li class="reveal" style="--d:120ms">
+  <a class="work-card" href="work/pachamamas.html">
+    <div class="media"><img src="assets/img/work/pachamamas-cover.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
+    <div class="info">
+      <span class="idx" aria-hidden="true">04</span>
+      <h3>Pachamamas <span class="arrow" aria-hidden="true">↗</span></h3>
+      <p>An online shop for small-batch botanical skincare, told by the woman who makes it.</p>
+      <ul class="tags" aria-label="Scope"><li>E-commerce</li><li>Website</li></ul>
+    </div>
+  </a>
+</li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="work">
-        <article class="card">
-          <div class="thumb one">project thumbnail</div>
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <div class="meta">Mobile App · Product Design</div>
-            <p>A mobile experience designed to help people do something more easily.</p>
-            <a class="more" href="#">View project</a>
+  <section class="section dark" aria-labelledby="compare-title">
+    <div class="wrap">
+      <div class="sec-head split reveal">
+        <div>
+          <p class="eyebrow"><span class="num">03</span> The human touch</p>
+          <h2 id="compare-title" style="margin-top:1.5rem">Same brief. <em>Different care.</em></h2>
+        </div>
+        <p class="muted">Drag the handle. On the left is what a quick AI prompt gives you. On the right is the same hero after an hour of design decisions.</p>
+      </div>
+      <div class="compare reveal">
+        <div class="layer mock-ai" aria-hidden="true">
+          <div class="card">
+            <span class="pill">✨ Next-gen pool care</span>
+            <div class="h">🌊 Revolutionize Your Pool Experience</div>
+            <div class="p">Unlock the power of crystal-clear water with our cutting-edge, seamless solutions.</div>
+            <div class="b"><span>Get Started</span><span>Learn More</span></div>
+            <div class="f"><span>⚡ Fast</span><span>🚀 Innovative</span><span>💎 Premium</span></div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb two">project thumbnail</div>
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <div class="meta">Website · UI/UX Design</div>
-            <p>A website designed to make information easier to understand and navigate.</p>
-            <a class="more" href="#">View project</a>
+        </div>
+        <div class="layer after mock-human" aria-hidden="true">
+          <div class="card">
+            <div class="k">Pool service · West Palm Beach</div>
+            <div class="h">Crystal clear pools.<br>Zero hassle.</div>
+            <div class="p">Weekly visits, every chemical included, and photos after each one from background-checked technicians.</div>
+            <div class="row"><span class="b">Book my first visit</span><span class="price">Plans from <b>$150/mo</b></span></div>
+            <div class="proof"><span>★ 5.0 verified reviews</span><span>No contract option</span></div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb three">project thumbnail</div>
-          <div class="card-body">
-            <h3>Project Name</h3>
-            <div class="meta">Web App · Product Design</div>
-            <p>A digital product designed to help users accomplish something with less friction.</p>
-            <a class="more" href="#">View project</a>
-          </div>
-        </article>
+        </div>
+        <span class="tag-l" aria-hidden="true">AI first draft</span>
+        <span class="tag-r" aria-hidden="true">After design</span>
+        <label class="sr-only" for="compare-range">Compare the AI first draft with the designed version</label>
+        <input id="compare-range" type="range" min="0" max="100" value="50">
+        <div class="divider" aria-hidden="true"><span class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
       </div>
+      <p class="sr-only">The AI draft reads “Revolutionize your pool experience” with a purple gradient, emoji, two competing buttons and vague claims. The designed version reads “Crystal clear pools. Zero hassle.”, explains what is included, shows the starting price and has one clear button.</p>
+      <ul class="diff-list">
+        <li class="reveal"><h3>Specific beats impressive</h3><p>“Every chemical included” tells a homeowner more than any “cutting-edge solution”.</p></li>
+        <li class="reveal" style="--d:100ms"><h3>One clear next step</h3><p>One button with a real verb. A second button just splits the decision.</p></li>
+        <li class="reveal" style="--d:200ms"><h3>Answer the real question</h3><p>People want to know the price. Showing it early builds trust faster than adjectives.</p></li>
+      </ul>
     </div>
   </section>
 
-  <!-- WHAT I WORK ON -->
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="mark">what I work on</span>
-        <h2>Different products, same way of thinking</h2>
-        <p>I design different kinds of digital experiences, depending on what the product needs.</p>
-      </div>
-      <div class="grid-4">
-        <div class="cell">
-          <h3>Mobile Apps</h3>
-          <p>Apps designed around real user needs, from the overall experience down to the smallest interaction.</p>
-        </div>
-        <div class="cell">
-          <h3>Websites</h3>
-          <p>Websites that communicate clearly, look intentional, and make it easy for people to find what they need.</p>
-        </div>
-        <div class="cell">
-          <h3>Web Apps</h3>
-          <p>Digital tools and platforms that help people complete tasks, manage information, or get things done.</p>
-        </div>
-        <div class="cell">
-          <h3>Product Experiences</h3>
-          <p>The complete experience of using a digital product, including how people move through it, understand it, and interact with it.</p>
-        </div>
-      </div>
+  <div class="marquee dark" aria-hidden="true">
+    <div class="marquee-track">
+      <span>understand</span><span>✦</span><span>simplify</span><span>✦</span><span>design</span><span>✦</span><span>refine</span><span>✦</span><span>build</span><span>✦</span><span>understand</span><span>✦</span><span>simplify</span><span>✦</span><span>design</span><span>✦</span><span>refine</span><span>✦</span><span>build</span><span>✦</span><span>understand</span><span>✦</span><span>simplify</span><span>✦</span><span>design</span><span>✦</span><span>refine</span><span>✦</span><span>build</span><span>✦</span><span>understand</span><span>✦</span><span>simplify</span><span>✦</span><span>design</span><span>✦</span><span>refine</span><span>✦</span><span>build</span><span>✦</span>
     </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="mark">how I design</span>
-        <h2>I start with the problem, <span class="serif">not just the screen.</span></h2>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="n">01</div>
-          <div><h3>Understand</h3><p>What are we trying to solve? Who are we solving it for?</p></div>
-        </div>
-        <div class="step">
-          <div class="n">02</div>
-          <div><h3>Simplify</h3><p>I organize information and remove unnecessary complexity.</p></div>
-        </div>
-        <div class="step">
-          <div class="n">03</div>
-          <div><h3>Design</h3><p>I turn the solution into clear screens, interactions, and visual systems.</p></div>
-        </div>
-        <div class="step">
-          <div class="n">04</div>
-          <div><h3>Refine</h3><p>I test ideas, look for problems, and improve the experience.</p></div>
-        </div>
-        <div class="step">
-          <div class="n">05</div>
-          <div><h3>Build</h3><p>I work with developers and the wider team to bring the design into the real product.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee" aria-hidden="true">
-    <div>understand <span>·</span> simplify <span>·</span> design <span>·</span> refine <span>·</span> build <span>·</span> understand <span>·</span> simplify <span>·</span> design <span>·</span> refine <span>·</span> build <span>·</span> </div>
   </div>
 
-  <!-- STATEMENT -->
-  <section class="statement">
+  <section class="section paper" aria-labelledby="services-title">
     <div class="wrap">
-      <span class="mark">beyond the interface</span>
-      <p style="margin-top:24px">Good design isn’t only about how a screen looks.</p>
-      <p class="dim" style="font-size:1.05rem;line-height:1.6;letter-spacing:0">It’s about whether someone understands what to do, knows where to go next, and can accomplish what they came to do. That’s what I try to achieve with every product I work on.</p>
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="num">04</span> What I work on</p>
+        <h2 id="services-title" style="margin-top:1.5rem">Different products, <em>same care.</em></h2>
+      </div>
+      <ul class="cols-4">
+        <li class="reveal"><p class="eyebrow">A</p><h3>Websites</h3><p>Marketing sites and online shops that say the important thing first and make the next step obvious.</p></li>
+        <li class="reveal" style="--d:80ms"><p class="eyebrow">B</p><h3>Mobile apps</h3><p>App flows designed around one task per screen, built for thumbs, small moments and real habits.</p></li>
+        <li class="reveal" style="--d:160ms"><p class="eyebrow">C</p><h3>Web apps</h3><p>Customer portals and tools where people book, track, pay and manage things without calling support.</p></li>
+        <li class="reveal" style="--d:240ms"><p class="eyebrow">D</p><h3>AI-built products</h3><p>Prototypes and MVPs I vibe code with AI, then refine until they look and behave like a finished product.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section paper-2" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="sec-head split reveal">
+        <div>
+          <p class="eyebrow"><span class="num">05</span> Process</p>
+          <h2 id="process-title" style="margin-top:1.5rem">I start with the problem, <em>not the screen.</em></h2>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span class="n">01</span><h3>Understand</h3><p>What are we solving, and for whom? I talk to the team, read the reviews and look at what people actually do.</p></li>
+        <li class="reveal"><span class="n">02</span><h3>Simplify</h3><p>I organize the content and remove what doesn’t help someone decide or act.</p></li>
+        <li class="reveal"><span class="n">03</span><h3>Design</h3><p>Clear screens, interactions and a visual system that fits the brand, not a template.</p></li>
+        <li class="reveal"><span class="n">04</span><h3>Refine</h3><p>I test, look for friction, and polish spacing, copy and states until nothing feels accidental.</p></li>
+        <li class="reveal"><span class="n">05</span><h3>Build</h3><p>I work with developers, or build it myself with AI, so the shipped product matches the design.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section dark" aria-labelledby="now-title">
+    <div class="wrap now">
+      <div class="reveal">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Currently</p>
+        <h2 id="now-title" style="margin-top:1.5rem;max-width:18ch">Designing apps and digital products at <em>Chayland Design.</em></h2>
+      </div>
+      <div class="reveal" style="--d:120ms">
+        <a class="btn btn-ghost" href="https://chayland.com/">Visit Chayland <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
     </div>
   </section>
 </main>
-
-<footer>
+<footer class="site-footer dark">
   <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <span class="mark">let’s make something better</span>
-        <h2 style="margin-top:16px">Working on a new product or improving an existing one?</h2>
+    <div class="footer-cta reveal">
+      <p class="eyebrow">Have a product in mind?</p>
+      <h2 style="margin-top:1.5rem">Let’s make it <em>intentional.</em></h2>
+      <div class="btn-row">
+        <a class="btn btn-light" href="contact.html">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
       </div>
-      <a class="btn" href="contact.html">Get in touch</a>
     </div>
-    <div class="foot-bottom">
-      <span>© <span id="yr"></span> Glory Vherabad</span>
-      <span>Product UI/UX Designer</span>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Glory. Product designer at <a class="link" href="https://chayland.com/">Chayland Design</a>.</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:hello@yourdomain.com">Email</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/orb.js" defer></script>
 </body>
 </html>
